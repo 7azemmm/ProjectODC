@@ -1,0 +1,51 @@
+
+
+  <div class="parent">
+    <div class="container">
+        <!-- Title section -->
+        <div class="title">Registration</div>
+        <div class="content">
+          <!-- Registration form -->
+          <form >
+            <div class="user-details">
+
+              <div class="input-box width200">
+                <span class="details">UserName</span>
+                <input type="text" name="UserName" [(ngModel)]="registerObj.UserName" placeholder="Enter your username" required>
+              </div>
+
+              <div class="input-box width200">
+                <span class="details">Password</span>
+                <input type="password" name="Password" [(ngModel)]="registerObj.Password" placeholder="Enter your password" required>
+              </div>
+
+              <div class="input-box width200">
+                <span class="details">Age</span>
+                <input type="text" name="Age" [(ngModel)]="registerObj.Age" placeholder="Enter your Age" required>
+              </div>
+
+              <div class="input-box">
+                <span class="details">PhoneNumber</span>
+                <input type="text" name="PhoneNumber" [(ngModel)]="registerObj.PhoneNumber"  placeholder="Enter your PhoneNumber" required>
+              </div>
+
+              <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text" name="Address" [(ngModel)]="registerObj.Address" placeholder="Enter your Address" required>
+              </div>
+
+
+            </div>
+
+            <!-- Submit button -->
+            <div class="button">
+              <input type="submit" (click)="onSignUp()" value="Register">
+            </div>
+            <div class="register-link">
+                <p>Already have an account? <a routerLink="/login">Login here</a></p>
+              </div>
+          </form>
+        </div>
+      </div>
+
+  </div>

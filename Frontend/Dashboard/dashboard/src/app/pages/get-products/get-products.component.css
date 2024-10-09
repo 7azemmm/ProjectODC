@@ -1,0 +1,100 @@
+/* Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Card */
+.card-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Header */
+.card-header {
+  padding: 15px;
+  background-color: #f8f9fa;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-name {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.product-price {
+  margin: 5px 0 0;
+  font-size: 1.1rem;
+  color: #1a73e8;
+}
+
+/* Body */
+.card-body {
+  padding: 10px 15px;
+}
+
+.product-quantity {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.5;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.card-footer {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.card-footer a {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+}
+
+.btn-primary {
+  background-color: #0275d8;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #025aa5;
+}

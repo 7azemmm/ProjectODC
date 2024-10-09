@@ -1,0 +1,22 @@
+<div class="card-container">
+  @for(product of product_arr; track $index) {
+    <div class="card-item" >
+      <div class="card-header">
+        <img [src]="getImageUrl(product.imagePath)" [alt]="product.name" style="width: 100%; height: 200px;">
+        <!-- <h1>{{product.imagePath}}</h1> -->
+      </div>
+      <div class="card-header">
+        <h3 class="product-name">{{ product.name }}</h3>
+        <h4 class="product-price">${{ product.price }}</h4>
+      </div>
+      <div class="card-body">
+        <h4 class="product-quantity">Quantity: {{ product.quantity }}</h4>
+        <p class="product-description">{{ product.description }}</p>
+      </div>
+      <div class="card-footer">
+        <a (click)="onDelete(product._id)" class="btn btn-danger">Delete</a>
+        <a href="/UpdateProduct/{{ product._id }}" class="btn btn-primary">Update</a>
+      </div>
+    </div>
+  }
+</div>

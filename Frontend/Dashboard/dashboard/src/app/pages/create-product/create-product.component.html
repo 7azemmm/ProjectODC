@@ -1,0 +1,32 @@
+<form (ngSubmit)="onCreate()" #productForm="ngForm">
+  <div class="user-details">
+    <div class="input-box width200">
+      <span class="details">Name</span>
+      <input type="text" name="name" [(ngModel)]="productObj.name" placeholder="Enter product name" required>
+    </div>
+
+    <div class="input-box width200">
+      <span class="details">Price</span>
+      <input type="text" name="price" [(ngModel)]="productObj.price" placeholder="Enter product price" required>
+    </div>
+
+    <div class="input-box width200">
+      <span class="details">Quantity</span>
+      <input type="text" name="quantity" [(ngModel)]="productObj.quantity" placeholder="Enter product quantity" required>
+    </div>
+
+    <div class="input-box">
+      <span class="details">Description</span>
+      <textarea name="description" [(ngModel)]="productObj.description" rows="4" cols="50" placeholder="Enter product description" required></textarea>
+    </div>
+
+    <div class="input-box width200">
+      <span class="details">Image</span>
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" required>
+    </div>
+  </div>
+
+  <div class="button">
+    <input type="submit" value="Create Product" [disabled]="productForm.invalid">
+  </div>
+</form>

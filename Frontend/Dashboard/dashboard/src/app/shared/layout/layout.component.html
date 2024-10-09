@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="/dashboard"> <i class="fas fa-user"></i> Welcome admin {{ userName }}</a></li>
+        <li><a href="/dashboard" routerLinkActive="active"> <i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="/createProduct" routerLinkActive="active"> <i class="fas fa-plus-circle"></i> Create Product</a></li>
+        <li><a href="/GetProduct" routerLinkActive="active"> <i class="fas fa-list"></i> Get Products</a></li>
+        <li><a (click)="onLogout()"> <i class="fas fa-sign-out-alt"></i> Log out</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- This is where child routes will be injected -->
+    <router-outlet></router-outlet>
+  </main>
+</div>

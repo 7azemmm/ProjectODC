@@ -1,0 +1,75 @@
+/* Container for the slider */
+.slider {
+    position: relative;
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflowing slides */
+    border: 2px solid #ddd; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+  }
+  
+  /* The container that holds all the slides */
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+    width: 100%;
+  }
+  
+  /* Style for each slide */
+  .slide {
+    min-width: 100%; /* Each slide takes up 100% of the slider width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the image to fit the container */
+  }
+  
+  /* Navigation buttons (prev/next) */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  /* Hover effect for the buttons */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Optional: Add dots or indicators at the bottom */
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .dots span {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dots span.active {
+    background-color: #ff6347; /* Active dot color */
+  }
+  
